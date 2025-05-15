@@ -5,48 +5,64 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LABIT</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
 </head>
 <body>
-  <header class="banner">
-    <img src="labit.jpg" alt="Logo" class="logo">
-    <img src="ufpa_logo.png" alt="Logo" class="logo">
-    <h1>Fichamento <span> LABIT</span></h1>
-  </header>
 
-  <section class="breadcrumb">
-    ACADÊMICO / ARTIGOS  / SEGURANÇA DA INFORMAÇÃO / PROMPT INJECTION
-  </section>
-
-  <main class="content">
-    <h2>
-      Análise e Fichamento do artigo: “Prompt Injection Attack Against LLM-integrated Applications”
-    </h2>
-    <div class="meta">
-      <span>15 de maio de 2025</span>
-      <span>@labit.ufpa </span>
-      <span>Deixe um comentário</span>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-logo">
+      <img src="labit.jpg" alt="LABIT">
     </div>
+    <ul class="nav-links">
+      <li><i class="bi bi-house-door"></i> INÍCIO</li>
+      <li><i class="bi bi-people"></i> SOBRE NÓS</li>
+      <li><i class="bi bi-journal-text"></i> ARTIGOS</li>
+      <li><i class="bi bi-search"></i> PROJETOS </li>
+      <li><i class="bi bi-newspaper"></i> NOTÍCIAS</li>
+      <li><i class="bi bi-envelope"></i> CONTATO</li>
+    </ul>
+    <div class="nav-search">
+    <i class="bi bi-search"></i>
+    <input type="text" placeholder="Buscar...">
+  </div>
+  </nav>
+
+  <!-- CARD COM CONTEÚDO -->
+  <div class="card">
+    <section class="breadcrumb">
+      ARTIGOS / SEGURANÇA DA INFORMAÇÃO / PROMPT INJECTION
+    </section>
+
+    <h2>Fichamento do artigo: “Prompt Injection Attack Against LLM-integrated Applications”</h2>
+
+    <div class="meta">
+    <span><i class="bi bi-calendar-event"></i> 16 de maio de 2025</span>
+    <span><i class="bi bi-at"></i>labit.ufpa</span>
+  </div>
+
 
     <p>
-      O artigo <strong>“Prompt Injection Attack Against LLM-integrated Applications
-”</strong>
-       foi desenvolvido pelos pesquisadores Yi Liu, Gelei Deng, Yuekang Li, Kailong Wang, Zihao Wang, Xiaofeng Wang, Tianwei Zhang, Yepang Liu, Haoyu Wang, Yan Zheng e Yang Liu e foi publicado na "Cryptography and Security"da Universidade de Cornell em 2024.
+      O artigo <strong>“Prompt Injection Attack Against LLM-integrated Applications”</strong> foi desenvolvido pelos pesquisadores Yi Liu, Gelei Deng, Yuekang Li, Kailong Wang, Zihao Wang, Xiaofeng Wang, Tianwei Zhang, Yepang Liu, Haoyu Wang, Yan Zheng e Yang Liu, e foi publicado na revista "Cryptography and Security" da Universidade de Cornell em 2024.
     </p>
     <p>
-        O principal objetivo do artigo foi analisar os impactos que os ataques de injeção imediata causam em aplicações reais que utilizam as LLMs. Então isso é realizado, basicamente, por meio da proposta que os autores do artigo apresentaram, que é uma nova técnica de injeção de prompt, chamada HOUEEU. Ela é dividida em três partes: um prompt pré-construído, um contexto indutor de prompt injection e uma mensagem/carga maliciosa. Assim, realizando os devidos ataques. 
-    </p>
-        Para chegar aos resultados, os autores propuseram a utilização de uma nova técnica de injeção de prompt, chamada HOUEEU. Ela é dividida em três partes: um prompt pré-construído, um contexto indutor de prompt injection e uma mensagem/carga maliciosa. Assim, realizando os devidos ataques. 
+      O principal objetivo do artigo foi analisar os impactos que os ataques de injeção imediata causam em aplicações reais que utilizam LLMs. Isso é feito por meio de uma nova técnica proposta pelos autores, chamada HOUEEU, dividida em três partes: um prompt pré-construído, um contexto indutor de prompt injection e uma carga maliciosa.
     </p>
     <p>
-        Nesse artigo, os autores utilizaram as seguintes tecnologias e métricas de avaliação: os autores utilizaram a proposta deles, que foi a técnica chamada HOUEEU para realizar os ataques de prompt injection e testaram em 36 aplicações reais que usam o LLM e utilizadas no mercado. 
+      Para chegar aos resultados, os autores testaram a técnica HOUEEU em 36 aplicações reais de mercado que utilizam LLMs.
     </p>
-    <P>
-        Como conclusão dos estudos, os autores destacaram que por meio da nova técnica realizaram e fizeram ataques graves a essas aplicações e que até então eram desconhecidas, como o uso arbitrário irrestrito de LLM e roubo de prompt de aplicativo descomplicado. Além disso, das 36 aplicações, 31 eram suscetíveis à injeção imediata. Logo, esse estudo apresenta os possíveis riscos de ataques de injeção imediata quanto às possíveis táticas de mitigação.
-    </P>
-    <P>
-      Fazendo uma relação, a pesquisa desenvolvida por *autores(são muitos)* pode ter um impacto direto no cenário de prompt injection, já que esse artigo mostra como realizar esses ataques e as premissas do que ele pode ocasionar e as consequências desse ataque em aplicações reais integradas a LLMs
-    </P>
-  </main>
+    <p>
+      Como conclusão, os autores destacaram que sua técnica permitiu realizar ataques graves a aplicações que até então eram consideradas seguras. Das 36 aplicações testadas, 31 foram vulneráveis, demonstrando os riscos e a necessidade de medidas de mitigação.
+    </p>
+    <p>
+      A pesquisa desenvolvida pode ter um impacto direto no cenário de segurança, ao evidenciar vulnerabilidades reais e propor critérios para entender e combater ataques de prompt injection em LLMs.
+    </p>
+  </div>
+  <footer class="footer">
+  <p>© 2025 LABIT. Todos os direitos reservados.</p>
+</footer>
 
 </body>
+
 </html>
