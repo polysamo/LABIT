@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LABIT</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-logo">
+      <img src="labit.jpg" alt="LABIT">
+    </div>
+    <ul class="nav-links">
+      <li><i class="bi bi-house-door"></i> INÍCIO</li>
+      <li><i class="bi bi-people"></i> SOBRE NÓS</li>
+      <li><i class="bi bi-journal-text"></i> ARTIGOS</li>
+      <li><i class="bi bi-search"></i> PROJETOS </li>
+      <li><i class="bi bi-newspaper"></i> NOTÍCIAS</li>
+      <li><i class="bi bi-envelope"></i> CONTATO</li>
+    </ul>
+    <div class="nav-search">
+    <i class="bi bi-search"></i>
+    <input type="text" placeholder="Buscar...">
+  </div>
+  </nav>
+
+  <!-- CARD COM CONTEÚDO -->
+  <div class="card">
+    <section class="breadcrumb">
+      ARTIGOS / SEGURANÇA DA INFORMAÇÃO / PROMPT INJECTION
+    </section>
+
+    <h2>Análise dos Principais Ataques de Prompt Injection</h2>
+
+    <div class="meta">
+    <span><i class="bi bi-calendar-event"></i> 23 de maio de 2025</span>
+    <span><i class="bi bi-at"></i>labit.ufpa</span>
+  </div>
+
+  <hr class="divider">
+
+    <p>
+        No contexto da alta demanda de desenvolvimento das Large Language Models (LLMs) que estão se expandindo cada vez mais diante dos seus usos e diversas aplicações comerciais, cresce de forma proporcional o aumento das vulnerabilidades que elas abrem para elas. Especificamente, os ataques de <strong>Prompt Injection</strong>, que se mostram exponencialmente cada vez mais perigosos aos usuários e essas aplicações. Diante disso, vamos apresentar e demonstrar o que são esses ataques de prompt injection e como eles funcionam.
+    </p>
+    <ul style="margin-left: 20px; margin-bottom: 1em;"></ul>
+        <li>
+            <strong>Introdução ao Prompt Injection</strong>
+            <p></p>
+            <p>
+                O ataque de Prompt Injection ocorre quando um usuário mal-intencionado busca explorar serviços de aplicações integradas a modelos de linguagem (LLMs), enganando-os. Dessa forma, esse usuário tenta contornar filtros e manipular os LLMs por meio de payloads contendo cargas maliciosas, fazendo com que executem ações que não deveriam realizar. A seguir, exploraremos os principais ataques relacionados a essa técnica.
+            </p>
+        </li>
+        <li>
+            <strong>Ataques de Prompt Injection</strong>
+            <p></p>
+            <ol style="margin-top: 0.5em; margin-left: 20px;">
+                <li><strong>Direct Injection</strong></li>
+                <p></p>
+                    <p>
+                        A injeção de prompt indireta é uma uma forma de injeção de prompt na qual comandos maliciosos são inseridos por meio de fontes externas. Ele introduz instruções maliciosas em dados externos, por exemplo, numa página web, comentário, ou resposta de uma API, que o modelo pode acabar acessando ou utilizando durante seu processamento. Diferente da injeção direta, esse tipo de ataque pode impactar sistemas de usuários distantes, pois se o modelo for configurado para buscar informações nesses locais externos, ele pode buscar  essas instruções maliciosas sem perceber, porque elas estão escondidas dentro de dados aparentemente legítimos.
+                    </p>
+                    <p>
+                        Um exemplo prático seria 
+                    </p>
+                <li><strong>Indirect Injection</strong></li>
+                <p></p>
+                    <p>
+                        A injeção de prompt indireta é uma uma forma de injeção de prompt na qual comandos maliciosos são inseridos por meio de fontes externas. Ele introduz instruções maliciosas em dados externos, por exemplo, numa página web, comentário, ou resposta de uma API, que o modelo pode acabar acessando ou utilizando durante seu processamento. Diferente da injeção direta, esse tipo de ataque pode impactar sistemas de usuários distantes, pois se o modelo for configurado para buscar informações nesses locais externos, ele pode buscar  essas instruções maliciosas sem perceber, porque elas estão escondidas dentro de dados aparentemente legítimos.
+                    </p>
+                    <p>
+                        Um exemplo prático 
+                    </p>
+                <li><strong>Unintentional Injection</strong></li>
+                <p></p>
+                    <p>
+                        O estudo apresenta uma breve apresentação sobre como os <strong>Large Language Models (LLMs)</strong> vêm transformando diversas aplicações, mas também introduzem vulnerabilidades de segurança, como o <strong>prompt injection</strong>, que permite usuários maliciosos modificarem as instruções originais desses modelos e injetar uma ação maldosa. O artigo, primeiramente, mostra um estudo piloto em 10 serviços comerciais integrados a LLMs, demostrando que ataques de prompt injection existentes foram pouco eficazes, devido à interpretação diversa dos prompts, restrições impostas pelas aplicações sobre as entradas e saídas e mecanismos de defesa baseados em múltiplas etapas com restrições de tempo.
+                    </p>
+                <li><strong>Intentional Model Influence</strong></li>
+                <p></p>
+                    <p>
+                        O estudo apresenta uma breve apresentação sobre como os <strong>Large Language Models (LLMs)</strong> vêm transformando diversas aplicações, mas também introduzem vulnerabilidades de segurança, como o <strong>prompt injection</strong>, que permite usuários maliciosos modificarem as instruções originais desses modelos e injetar uma ação maldosa. O artigo, primeiramente, mostra um estudo piloto em 10 serviços comerciais integrados a LLMs, demostrando que ataques de prompt injection existentes foram pouco eficazes, devido à interpretação diversa dos prompts, restrições impostas pelas aplicações sobre as entradas e saídas e mecanismos de defesa baseados em múltiplas etapas com restrições de tempo.
+                    </p>
+                <li><strong>Code Injection</strong></li>
+                <p></p>
+                    <p>
+                        O estudo apresenta uma breve apresentação sobre como os <strong>Large Language Models (LLMs)</strong> vêm transformando diversas aplicações, mas também introduzem vulnerabilidades de segurança, como o <strong>prompt injection</strong>, que permite usuários maliciosos modificarem as instruções originais desses modelos e injetar uma ação maldosa. O artigo, primeiramente, mostra um estudo piloto em 10 serviços comerciais integrados a LLMs, demostrando que ataques de prompt injection existentes foram pouco eficazes, devido à interpretação diversa dos prompts, restrições impostas pelas aplicações sobre as entradas e saídas e mecanismos de defesa baseados em múltiplas etapas com restrições de tempo.
+                    </p>
+                <li><strong>Payload Splitting</strong></li>
+                <p></p>
+                    <p>
+                        O estudo apresenta uma breve apresentação sobre como os <strong>Large Language Models (LLMs)</strong> vêm transformando diversas aplicações, mas também introduzem vulnerabilidades de segurança, como o <strong>prompt injection</strong>, que permite usuários maliciosos modificarem as instruções originais desses modelos e injetar uma ação maldosa. O artigo, primeiramente, mostra um estudo piloto em 10 serviços comerciais integrados a LLMs, demostrando que ataques de prompt injection existentes foram pouco eficazes, devido à interpretação diversa dos prompts, restrições impostas pelas aplicações sobre as entradas e saídas e mecanismos de defesa baseados em múltiplas etapas com restrições de tempo.
+                    </p>
+                <li><strong>Multimodal Injection</strong></li>
+                <p></p>
+                    <p>
+                        O estudo apresenta uma breve apresentação sobre como os <strong>Large Language Models (LLMs)</strong> vêm transformando diversas aplicações, mas também introduzem vulnerabilidades de segurança, como o <strong>prompt injection</strong>, que permite usuários maliciosos modificarem as instruções originais desses modelos e injetar uma ação maldosa. O artigo, primeiramente, mostra um estudo piloto em 10 serviços comerciais integrados a LLMs, demostrando que ataques de prompt injection existentes foram pouco eficazes, devido à interpretação diversa dos prompts, restrições impostas pelas aplicações sobre as entradas e saídas e mecanismos de defesa baseados em múltiplas etapas com restrições de tempo.
+                    </p>
+                <li><strong>Adversarial Suffix</strong></li>
+                <p></p>
+                    <p>
+                        O estudo apresenta uma breve apresentação sobre como os <strong>Large Language Models (LLMs)</strong> vêm transformando diversas aplicações, mas também introduzem vulnerabilidades de segurança, como o <strong>prompt injection</strong>, que permite usuários maliciosos modificarem as instruções originais desses modelos e injetar uma ação maldosa. O artigo, primeiramente, mostra um estudo piloto em 10 serviços comerciais integrados a LLMs, demostrando que ataques de prompt injection existentes foram pouco eficazes, devido à interpretação diversa dos prompts, restrições impostas pelas aplicações sobre as entradas e saídas e mecanismos de defesa baseados em múltiplas etapas com restrições de tempo.
+                    </p>
+                <li><strong>Multilingual/Obfuscated Attack</strong></li>
+                <p></p>
+                    <p>
+                        O estudo apresenta uma breve apresentação sobre como os <strong>Large Language Models (LLMs)</strong> vêm transformando diversas aplicações, mas também introduzem vulnerabilidades de segurança, como o <strong>prompt injection</strong>, que permite usuários maliciosos modificarem as instruções originais desses modelos e injetar uma ação maldosa. O artigo, primeiramente, mostra um estudo piloto em 10 serviços comerciais integrados a LLMs, demostrando que ataques de prompt injection existentes foram pouco eficazes, devido à interpretação diversa dos prompts, restrições impostas pelas aplicações sobre as entradas e saídas e mecanismos de defesa baseados em múltiplas etapas com restrições de tempo.
+                    </p>
+            </ol>
+        </li>
+
+
+
+  </div>
+  <footer class="footer">
+    <p>© 2025 LABIT. Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+
+</html>
