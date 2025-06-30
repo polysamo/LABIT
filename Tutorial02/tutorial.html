@@ -45,7 +45,7 @@
   <hr class="divider">
 
     <h4>O que é Prompt Injection no Contexto de SQL?</h4><br>
-        <p><strong>Prompt Injection</strong> é um tipo de manipulação de entrada onde um atacante controla como a entrada fornecida ao sistema (geralmente uma interface de IA ou processamento de linguagem natural) é interpretada e executada. A ideia central por trás desse ataque é manipular as entradas de linguagem natural de maneira que o modelo de linguagem (como o Gemini) acabe gerando uma consulta SQL maliciosa que compromete a segurança do banco de dados.</p>
+        <p><strong>Prompt Injection</strong> é um tipo de manipulação de entrada onde um atacante controla como a entrada fornecida ao sistema (geralmente uma interface de IA ou processamento de linguagem natural) é interpretada e executada. A ideia central por trás desse ataque é manipular as entradas de linguagem natural de maneira que o modelo de linguagem acabe gerando uma consulta SQL maliciosa que compromete a segurança do banco de dados.</p>
         <p>Em um cenário típico, um modelo de linguagem como um chatbot ou assistente virtual pode ser projetado para traduzir comandos em linguagem natural para <strong>consultas SQL</strong>. O problema surge quando esse modelo de linguagem não valida adequadamente as entradas de texto antes de gerar e executar a consulta SQL. Ao explorar esse ponto fraco, um atacante pode fornecer entradas maliciosas que alteram o comportamento do modelo e geram consultas SQL prejudiciais.</p>
 
     <h4>Cenário Prático como pode occorer: SQL Injection Usando Prompt Injection</h4><br>
@@ -84,10 +84,10 @@
      <h4>Proteção da aplicação contra prompt injection e SQL injection</h4><br>
     <p>A proteção contra Prompt Injection e SQL Injection exige uma combinação de boas práticas de segurança, como:</p>
     <ul style="margin-left: 30px; margin-bottom: 1%;">
-        <li><strong>Uso de Prepared Statements:</strong> Utilize consultas preparadas para garantir que os parâmetros não sejam interpretados como parte do código SQL.</li><br>
-        <li><strong>Sanitização de Entradas:</strong> Remova ou escape caracteres especiais que podem ser usados em ataques, como aspas simples, ponto e vírgula, e palavras-chave SQL.</li><br>
-        <li><strong>Validação e Filtragem de Dados:</strong> Valide e filtre as entradas de texto para garantir que não contenham comandos maliciosos.</li><br>
-        <li><strong>Auditoria de Consultas:</strong> Realize auditorias regulares nas consultas SQL geradas pelo sistema para identificar comportamentos anômalos ou maliciosos.</li><br>
+        <li><strong>Uso de Prepared Statements:</strong> Utilizar consultas preparadas para garantir que os parâmetros não sejam interpretados como parte do código SQL.</li><br>
+        <li><strong>Sanitização de Entradas:</strong> Remover caracteres especiais que podem ser usados em ataques, como aspas simples, ponto e vírgula, e palavras-chave SQL.</li><br>
+        <li><strong>Validação e Filtragem de Dados:</strong> Validar e filtrar as entradas de texto para garantir que não contenham comandos maliciosos.</li><br>
+        <li><strong>Auditoria de Consultas:</strong> Realizar auditorias regulares nas consultas SQL geradas pelo sistema para identificar comportamentos anômalos ou maliciosos.</li><br>
     </ul>
 
       <h4>Conclusão</h4><br>
