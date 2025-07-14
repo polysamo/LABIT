@@ -6,9 +6,16 @@
 }
 
 /* Corpo */
+html,
 body {
+  height: 100%;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   background: linear-gradient(to bottom, #5076e0 0%, #5a7deb 100%);
-  font-family: 'Segoe UI', sans-serif;
+  font-family: "Segoe UI", sans-serif;
   color: #222;
 }
 
@@ -21,15 +28,13 @@ body {
   padding: 10px 40px;
   height: 70px; /* altura fixa */
   overflow: hidden;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
-
 
 .nav-logo img {
   height: 140px;
   object-fit: contain;
 }
-
 
 .nav-links {
   list-style: none;
@@ -50,7 +55,6 @@ body {
 .nav-links li:hover {
   color: #446de1;
 }
-
 
 .nav-search {
   position: relative;
@@ -92,7 +96,6 @@ body {
   border-radius: 2px;
 }
 
-
 /* CARD */
 .card {
   background-color: white;
@@ -101,6 +104,7 @@ body {
   padding: 50px;
   border-radius: 16px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  flex: 1 0 auto;
 }
 
 .card:hover {
@@ -145,4 +149,5 @@ body {
   background-color: white;
   font-size: 14px;
   margin-top: 40px;
+  flex-shrink: 0;
 }
