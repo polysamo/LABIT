@@ -5,10 +5,6 @@
   box-sizing: border-box;
 }
 
-html,
-body {
-  height: 100%;
-}
 body {
   min-height: 100vh;
   display: flex;
@@ -24,9 +20,9 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 10px 40px;
-  height: 70px;
+  height: 70px; /* altura fixa */
   overflow: hidden;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 .nav-logo img {
