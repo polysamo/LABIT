@@ -5,21 +5,26 @@
   box-sizing: border-box;
 }
 
-/* Corpo */
+html,
 body {
+  height: 100%;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   background: linear-gradient(to bottom, #5076e0 0%, #5a7deb 100%);
   font-family: "Segoe UI", sans-serif;
   color: #222;
 }
 
-/* NAVBAR */
 .navbar {
   background-color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 40px;
-  height: 70px; /* altura fixa */
+  height: 70px;
   overflow: hidden;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
@@ -79,17 +84,6 @@ body {
   background: #e0e0e0;
 }
 
-.divider {
-  border: none;
-  height: 1px;
-  background-color: rgb(173, 173, 173);
-  margin: 30px 0;
-  width: 100%;
-  box-shadow: 0 1px 3px rgba(68, 109, 225, 0.3);
-  border-radius: 2px;
-}
-
-/* CARD */
 .card {
   background-color: white;
   max-width: 1000px;
@@ -97,41 +91,11 @@ body {
   padding: 50px;
   border-radius: 16px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  flex: 1 0 auto;
 }
 
 .card:hover {
   box-shadow: 0 12px 36px rgba(0, 0, 0, 0.15);
-}
-
-/* Breadcrumb */
-.breadcrumb {
-  font-size: 14px;
-  color: #446de1;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-}
-
-/* Título e Meta */
-.card h2 {
-  font-size: 24px;
-  margin-bottom: 15px;
-}
-
-.meta {
-  font-size: 14px;
-  color: #777;
-  margin-bottom: 30px;
-}
-
-.meta span {
-  margin-right: 20px;
-}
-
-/* Parágrafos */
-.card p {
-  margin-bottom: 20px;
-  line-height: 1.7;
-  text-align: justify;
 }
 
 .footer {
@@ -141,4 +105,42 @@ body {
   background-color: white;
   font-size: 14px;
   margin-top: 40px;
+  flex-shrink: 0;
+}
+
+.index-link {
+  display: block;
+  background: #f0f4ff;
+  color: #446de1;
+  text-decoration: none;
+  padding: 16px 24px;
+  border-radius: 10px;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(68, 109, 225, 0.07);
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  border: 1px solid #dbeafe;
+}
+.index-link:hover {
+  background: #446de1;
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(68, 109, 225, 0.13);
+  border: 1px solid #446de1;
+}
+
+@media (max-width: 700px) {
+  .card {
+    padding: 20px;
+  }
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 10px;
+  }
+  .nav-logo img {
+    height: 80px;
+  }
+  .nav-links {
+    gap: 10px;
+    font-size: 0.95em;
+  }
 }

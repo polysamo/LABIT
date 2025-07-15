@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LABIT</title>
+    <link rel="stylesheet" href="fichamento04.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-logo">
+            <img src="labit.jpg" alt="LABIT">
+        </div>
+        <ul class="nav-links">
+            <li><i class="bi bi-house-door"></i> INÍCIO</li>
+            <li><i class="bi bi-people"></i> SOBRE NÓS</li>
+            <li><i class="bi bi-journal-text"></i> ARTIGOS</li>
+            <li><i class="bi bi-search"></i> PROJETOS </li>
+            <li><i class="bi bi-newspaper"></i> NOTÍCIAS</li>
+            <li><i class="bi bi-envelope"></i> CONTATO</li>
+        </ul>
+        <div class="nav-search">
+            <i class="bi bi-search"></i>
+            <input type="text" placeholder="Buscar...">
+        </div>
+    </nav>
+    <div class="card">
+        <section class="breadcrumb">
+            ARTIGOS / SEGURANÇA DA INFORMAÇÃO / PROMPT INJECTION
+        </section>
+        <div style="margin: 18px 0 30px 0;">
+            <a href="../index.html" style="color:#446de1; font-weight:600; text-decoration:none; font-size:1.1em;"><i
+                    class="bi bi-arrow-left"></i> Voltar ao Início</a>
+        </div>
+        <h2>Fichamento do artigo: “Systematic Literature Review on SQL Injection Attack”</h2>
+        <div class="meta">
+            <span><i class="bi bi-calendar-event"></i> 14 de julho de 2025</span>
+            <span><i class="bi bi-at"></i>labit.ufpa</span>
+        </div>
+        <hr class="divider">
+        <p style="text-align:justify;">
+            O artigo <strong>“Systematic Literature Review on SQL Injection Attack”</strong> foi desenvolvido e
+            escrito
+            pelos pesquisadores M.A. Lawal, Abu Bakar Md. Sultan e Ayanloye O. Shakiru, sendo publicado no International
+            Journal of Soft Computing em 2016. O estudo apresenta uma Revisão Sistemática da Literatura (SLR) sobre
+            ataques de injeção de SQL (SQLIA), com base na metodologia de Kitchenham, amplamente reconhecida na
+            engenharia de software.
+        </p>
+        <p style="text-align:justify;">
+            A proposta da pesquisa é, <strong>categorizar</strong> e <strong>comparar</strong> os principais métodos de
+            ataque de <strong>SQLIA</strong>, seus
+            impactos e as contramedidas existentes, com foco em aplicações web. Esses ataques exploram falhas nos
+            mecanismos de validação de entrada e representam uma ameaça significativa à integridade, confidencialidade e
+            disponibilidade de dados armazenados em bancos relacionais.
+        </p>
+        <p>
+            O trabalho foi guiado por quatro perguntas principais:
+        </p>
+
+        <ul
+            style="gap: 18px; margin: 30px 0 30px 0; padding-left: 24px; list-style: disc inside; font-size:1.13em; text-align:justify;">
+            <li style="margin-bottom: 0;"><em>Quais são as causas principais dos ataques de SQLIA?</em></li>
+            <li style="margin-bottom: 0;"><em>Quais os tipos mais comuns de ataques e suas estruturas?</em></li>
+            <li style="margin-bottom: 0;"><em>Qual a eficácia das técnicas existentes contra diferentes vetores de
+                    ataque?</em></li>
+            <li style="margin-bottom: 0;"><em>Quais técnicas são utilizadas para detecção e prevenção?</em></li>
+        </ul>
+
+        <br>
+
+        <p style="text-align:justify;">
+            A metodologia da revisão envolveu buscas sistemáticas nas bases IEEE Xplore, ACM DL, ScienceDirect e Scopus,
+            adotando critérios rigorosos de inclusão, exclusão e avaliação da qualidade dos estudos com base nas
+            diretrizes do Centre for Reviews and Dissemination (CRD) e da base DARE.
+        </p>
+
+        <p style="text-align:justify;">
+            Os dados extraídos foram organizados em quatro categorias temáticas: (1) intenções dos ataques; (2) impactos
+            sobre aplicações e dados; (3) técnicas utilizadas pelos atacantes; e (4) abordagens para detecção e
+            prevenção. A análise comparativa dessas categorias permitiu compreender a amplitude e profundidade do
+            problema, bem como identificar lacunas e avanços no combate aos SQLIA.
+        </p>
+
+        <strong> Intenções e Impactos dos SQLIA </strong>
+        <figure style="text-align:center; margin: 28px 0 32px 0;">
+            <img src="imagem01.png" alt="Intenções e Impactos dos SQLIA"
+                style="width:90%; max-width:700px; height:auto; box-shadow:0 2px 12px #0001; border-radius:8px;">
+            <figcaption style="font-size: 1em; color: #446de1; margin-top: 10px; font-weight:500;">Figura 1 – Esquema
+                das intenções e impactos dos ataques de SQL Injection. Fonte: Hiago Silva, 2025.</figcaption>
+        </figure>
+
+        <h3 style="color:#2d3a5a; margin-top:40px;">Técnicas de Ataque</h3>
+        <p style="text-align:justify;">
+            A pesquisa sistematiza os principais métodos utilizados em SQLIA:
+        </p>
+
+        <strong>Tautologias</strong>
+        <p style="text-align:justify;">
+            Uma das técnicas mais comuns. Consiste na inserção de expressões booleanas sempre verdadeiras (ex: <span
+                style="font-style:italic; background:#f0f0f0; padding:2px 8px; border-radius:6px; font-family:monospace; font-size:1.12em;">OR
+                1=1</span>) nos campos de entrada da aplicação. Ao modificar a cláusula WHERE da query, o atacante
+            consegue retornar todos os registros da tabela ou ignorar etapas de autenticação. É amplamente usada para
+            realizar login sem credenciais válidas, contornando sistemas de verificação.
+        </p>
+        <strong>Consultas Logicamente Incorretas (LIQ)</strong>
+        <p style="text-align:justify;">
+            O atacante insere comandos propositadamente malformados com o objetivo de forçar o banco de dados a retornar
+            mensagens de erro detalhadas. Esses erros são analisados para revelar a estrutura do banco (nomes de
+            tabelas, colunas, tipos de dados, etc.), servindo como base para a exploração futura. Essa técnica é útil em
+            fases de reconhecimento.
+        </p>
+        <strong>Union Queries</strong>
+        <p style="text-align:justify;">
+            Utiliza a instrução <span
+                style="font-style:italic; background:#f0f0f0; padding:2px 8px; border-radius:6px; font-family:monospace; font-size:1.12em;">UNION
+                SELECT</span> para combinar os resultados da consulta legítima da aplicação com dados de outras tabelas.
+            Isso permite o vazamento de informações que normalmente não estariam acessíveis ao usuário, como nomes de
+            usuários, senhas, informações financeiras ou registros administrativos.
+        </p>
+        <strong>Stored Procedures</strong>
+        <p style="text-align:justify;">
+            Ataques desse tipo visam inserir comandos dentro de procedimentos armazenados previamente no banco, como
+            <span
+                style="font-style:italic; background:#f0f0f0; padding:2px 8px; border-radius:6px; font-family:monospace; font-size:1.12em;">xp_cmdshell</span>,
+            <span
+                style="font-style:italic; background:#f0f0f0; padding:2px 8px; border-radius:6px; font-family:monospace; font-size:1.12em;">sp_executesql</span>
+            e outros. Quando mal configuradas, essas funções podem permitir ao atacante executar comandos críticos
+            diretamente no banco ou até no sistema operacional, levando à execução remota de código.
+        </p>
+        <strong>Piggy-Backed Queries</strong>
+        <p style="text-align:justify;">
+            Também chamadas de consultas empilhadas, consistem na injeção de múltiplas instruções SQL separadas por
+            ponto e vírgula (<span
+                style="font-style:italic; background:#f0f0f0; padding:2px 8px; border-radius:6px; font-family:monospace; font-size:1.12em;">;</span>)
+            em um único campo. Com isso, após a execução da query original, comandos adicionais podem ser executados —
+            como <span
+                style="font-style:italic; background:#f0f0f0; padding:2px 8px; border-radius:6px; font-family:monospace; font-size:1.12em;">DROP
+                TABLE</span>, <span
+                style="font-style:italic; background:#f0f0f0; padding:2px 8px; border-radius:6px; font-family:monospace; font-size:1.12em;">DELETE
+                FROM</span> ou <span
+                style="font-style:italic; background:#f0f0f0; padding:2px 8px; border-radius:6px; font-family:monospace; font-size:1.12em;">UPDATE</span>
+            — alterando ou corrompendo dados.
+        </p>
+        <strong>Codificações Alternativas (Alternate Encodings)</strong>
+        <p style="text-align:justify;">
+            Envolvem a substituição de caracteres e palavras-chave por codificações equivalentes (Unicode, ASCII,
+            hexadecimal) com o objetivo de contornar filtros de entrada ou mecanismos de detecção. Por exemplo, a
+            palavra <span
+                style="font-style:italic; background:#f0f0f0; padding:2px 8px; border-radius:6px; font-family:monospace; font-size:1.12em;">SELECT</span>
+            pode ser representada como <span
+                style="font-style:italic; background:#f0f0f0; padding:2px 8px; border-radius:6px; font-family:monospace; font-size:1.12em;">%53%45%4C%45%43%54</span>,
+            dificultando a identificação por firewalls ou validadores simples.
+        </p>
+        <strong>Ataques por Inferência</strong>
+        <p style="text-align:justify;">
+            São técnicas que não dependem de retorno explícito de dados, mas sim da análise de comportamento do sistema.
+            Subdividem-se em:
+        </p>
+        <ul style="margin-left: 30px; text-align:justify;">
+            <li><strong>Blind SQL Injection:</strong> o atacante faz perguntas booleanas (verdadeiro/falso) e observa se
+                há mudanças de resposta (ex.: erro 500, tela em branco, resposta vazia). Através de testes repetidos, é
+                possível reconstruir dados sensíveis sem que eles apareçam na tela.</li>
+            <br>
+            <li><strong>Time-Based SQL Injection:</strong> baseada na introdução de atrasos intencionais nas consultas
+                (ex: <span
+                    style="font-style:italic; background:#f0f0f0; padding:2px 8px; border-radius:6px; font-family:monospace; font-size:1.12em;">WAITFOR
+                    DELAY '00:00:05'</span>). Se o sistema demorar a responder, o atacante confirma que a condição foi
+                satisfeita, permitindo inferência sobre os dados.</li>
+        </ul>
+        <br>
+        <p style="text-align:justify;">
+            Cada técnica possui diferentes níveis de sofisticação, impacto e visibilidade. Algumas são rápidas e
+            barulhentas (como tautologias e piggy-backed), enquanto outras são silenciosas e discretas (como blind e
+            time-based). O conhecimento aprofundado dessas variações permite a construção de defesas mais precisas e
+            contextualizadas.
+        </p>
+
+        <figure style="text-align:center; margin: 28px 0 32px 0;">
+            <img src="imagem02.png" alt="Avaliação das técnicas de defesa contra SQLIA"
+                style="width:90%; max-width:700px; height:auto; box-shadow:0 2px 12px #0001; border-radius:8px;">
+            <figcaption style="font-size: 1em; color: #446de1; margin-top: 10px; font-weight:500;">Figura 2 – Avaliação
+                visual das técnicas de defesa contra SQL Injection. Fonte: Hiago Silva, 2025.</figcaption>
+        </figure>
+
+        <h3 style="color:#2d3a5a; margin-top:40px;">Técnicas de Detecção e Prevenção</h3>
+        <p style="text-align:justify;">
+            O estudo identificou 16 abordagens principais para mitigação de SQLIA:
+        </p>
+
+        <figure style="text-align:center; margin: 28px 0 32px 0;">
+            <img src="imagem03.png" alt="Principais técnicas de mitigação de SQLIA"
+                style="width:90%; max-width:700px; height:auto; box-shadow:0 2px 12px #0001; border-radius:8px;">
+            <figcaption style="font-size: 1em; color: #446de1; margin-top: 10px; font-weight:500;">Figura 3 – Principais
+                técnicas de mitigação de SQL Injection. Fonte: Hiago Silva, 2025.</figcaption>
+        </figure>
+
+        <div style="margin-left: 0; margin-bottom: 30px; text-align:justify;">
+            <strong>AMNESIA</strong> <em>(Analysis and Monitoring for Neutralizing SQL Injection Attacks)</em><br>
+            Combina análise estática e monitoramento em tempo de execução. Inicialmente, constrói um modelo de queries
+            válidas da aplicação com base no código-fonte. Em seguida, intercepta consultas geradas dinamicamente e as
+            compara com o modelo. Caso haja discrepância, a execução é bloqueada. A ferramenta oferece proteção
+            automatizada e contínua.
+            <br><br>
+            <strong>SQLProb</strong> <em>(SQL Proxy)</em><br>
+            Utiliza uma arquitetura intermediária baseada em proxy, inserida entre o servidor web e o banco de dados.
+            Esse proxy examina as requisições SQL em tempo real, identificando estruturas maliciosas e neutralizando-as
+            antes que cheguem ao banco de dados. A solução atua como camada adicional de defesa sem exigir grandes
+            mudanças na aplicação.
+            <br><br>
+            <strong>PSIAQOP</strong> <em>(Prevention of SQL Injection Attacks based on Query Optimization
+                Process)</em><br>
+            Analisa o código-fonte da aplicação para localizar pontos de vulnerabilidade (“hotspots”), reescrevendo as
+            queries por meio de um processo de otimização baseado em regras heurísticas. A abordagem garante que as
+            consultas executadas sejam seguras, sem comprometer o desempenho.
+            <br><br>
+            <strong>SQLDOM</strong> <em>(SQL Domain Object Model)</em><br>
+            Introduz uma API intermediária para forçar a construção de consultas SQL por meio de métodos seguros e
+            parametrizados. A ideia é eliminar a manipulação direta de strings SQL, promovendo maior segurança desde a
+            etapa de desenvolvimento.
+            <br><br>
+            <strong>WebSSARI</strong> <em>(Web Application Security by Static Analysis and Runtime Inspection)</em><br>
+            Utiliza análise estática para mapear os fluxos de dados sensíveis na aplicação. Ao detectar que tais fluxos
+            alcançam pontos de execução sem sanitização adequada, aciona mecanismos de proteção em tempo real. É uma
+            abordagem híbrida que combina segurança preventiva e reativa.
+            <br><br>
+            <strong>SQLRand</strong> <em>(SQL Randomization)</em><br>
+            Aplica randomização de tokens e comandos SQL por meio de proxies. As consultas válidas possuem marcações
+            específicas conhecidas apenas pela aplicação e pelo servidor, tornando injeções externas inválidas ou
+            inoperantes. Isso dificulta a execução bem-sucedida de payloads maliciosos.
+            <br><br>
+            <strong>CANDID</strong> <em>(Candidate Anomaly Detection)</em><br>
+            Gera dinamicamente o formato esperado das queries com base nas entradas legítimas dos usuários. As consultas
+            reais são comparadas a esse modelo e, se divergirem significativamente, são bloqueadas. É útil para detectar
+            variações suspeitas sem intervenção manual.
+            <br><br>
+            <strong>SQL-IF</strong> <em>(SQL Injection Filter)</em><br>
+            Implementa um algoritmo de proteção embutido no ambiente de execução da aplicação, que realiza testes
+            automatizados em cada query gerada. A técnica visa impedir qualquer comando suspeito antes de sua execução
+            no banco de dados.
+            <br><br>
+            <strong>SQLIPA</strong> <em>(SQL Injection Prevention Architecture)</em>, <strong>CSSE</strong> <em>(Context
+                Sensitive String Evaluation)</em>, <strong>SQL-IDS</strong> <em>(SQL Intrusion Detection System)</em>,
+            <strong>SQLCheck</strong> <em>(SQL Check)</em>, <strong>SQLGuard</strong> <em>(SQL Guard)</em><br>
+            Essas técnicas implementam mecanismos como hashing de credenciais, metadados contextuais, especificações
+            comportamentais e gramáticas SQL para restringir ou validar comandos gerados dinamicamente. Algumas exigem
+            instrumentação manual ou adaptação do código-fonte da aplicação.
+            <br><br>
+            <strong>Obfuscation-Based Detection</strong>, <strong>SAFELI</strong> <em>(Static Analysis Framework for
+                Detecting SQL Injection)</em> e <strong>Matching ASCII</strong><br>
+            Aplicam codificação de queries, análise simbólica, ou restrição de caracteres válidos para dificultar a
+            injeção de comandos maliciosos. Em geral, essas técnicas são mais especializadas e dependem de linguagens ou
+            plataformas específicas.
+        </div>
+        <p style="text-align:justify;">
+            Os autores ressaltam que, embora algumas abordagens ofereçam cobertura ampla e automação (como AMNESIA e
+            SQLProb), outras têm limitações quanto à escalabilidade, generalização e necessidade de modificação no
+            código original. A eficácia das técnicas também varia conforme o tipo de SQLIA — o que é detalhado na Tabela
+            5 do artigo, utilizada como base comparativa das defesas propostas.
+        </p>
+
+        <h3 style="color:#2d3a5a; margin-top:40px;">Avaliação da Efetividade das Técnicas de Prevenção e Detecção</h3>
+        <figure style="text-align:center; margin: 28px 0 32px 0;">
+            <img src="image04.png" alt="Comparativo de efetividade das técnicas de defesa"
+                style="width:100%; max-width:900px; height:auto; box-shadow:0 2px 12px #0001; border-radius:8px;">
+            <figcaption style="font-size: 1em; color: #446de1; margin-top: 10px; font-weight:500;">Figura 4 –
+                Comparativo de efetividade das técnicas de defesa contra SQL Injection. Fonte: Systematic Literature
+                Review on SQL Injection Attack, 2016.</figcaption>
+        </figure>
+        <p style="text-align:justify;">
+            A Tabela apresenta uma análise comparativa entre as técnicas de segurança estudadas, avaliando
+            sua capacidade de detectar e/ou prevenir diferentes tipos de ataques de SQL Injection. Os ataques
+            considerados na avaliação incluem: tautologias, consultas logicamente incorretas, codificações alternativas,
+            queries <span
+                style="font-style:italic; background:#f0f0f0; padding:2px 8px; border-radius:6px; font-family:monospace; font-size:1.12em;">UNION</span>,
+            ataques piggy-backed, uso de stored procedures e inferência de dados.
+        </p>
+        <p style="text-align:justify;">
+            Cada técnica foi classificada conforme os seguintes critérios:
+        </p>
+        <ul style="margin-left: 30px; text-align:justify;">
+            <li><strong>✓</strong> (check) indica que a técnica é eficaz contra o tipo específico de ataque;</li>
+            <li><strong>X</strong> indica que não é eficaz;</li>
+            <li><strong>N</strong> indica que a técnica não foi avaliada quanto àquele ataque;</li>
+            <li><strong>P</strong> indica eficácia parcial.</li>
+        </ul>
+
+        <br>
+
+        <p style="text-align:justify;">
+            Com base na figura apresentada no artigo (Figura 4), os resultados evidenciam que técnicas como PSIAQOP,
+            SQLProb, WebSSARI, AMNESIA, SQL-IF e SQLDOM mostraram cobertura ampla, sendo capazes de lidar com múltiplos
+            vetores de ataque. Já outras soluções, como CANDID, Swaddler e Tautology Checker, apresentaram limitações
+            quanto à abrangência, cobrindo apenas tipos específicos de SQLIA. A imagem disponibilizada a seguir ilustra
+            essa avaliação de forma visual e detalhada.
+        </p>
+
+        <h3 style="color:#2d3a5a; margin-top:40px;">Conclusão</h3>
+        <br>
+        <p style="text-align:justify;">
+            Em conclusão, a pesquisa investigou a detecção e prevenção de ataques de injeção de SQL em aplicações web,
+            realizando uma revisão sistemática que mapeou os principais tipos de ataques (como tautologias, consultas
+            logicamente incorretas e inferência) e avaliou a eficácia de técnicas de defesa por meio de métricas
+            comparativas apresentadas na Figura 4. Os resultados demonstraram que, embora existam técnicas eficazes como
+            PSIAQOP, AMNESIA e SQL-Prob, muitas abordagens ainda enfrentam desafios como baixa cobertura, dependência de
+            modificações no código-fonte ou custos computacionais elevados. Além disso, técnicas mais simples mostraram
+            eficácia limitada ou restrita a tipos específicos de ataques. Esses achados indicam que, embora tenha havido
+            progresso na mitigação de SQLIA, ainda há espaço significativo para evolução nas estratégias de proteção.
+        </p>
+        <p style="text-align:justify;">
+            Fazendo uma relação, a pesquisa desenvolvida pelos autores pode ter um impacto direto no cenário de SQL
+            injection, pois ela oferece uma estrutura metodológica abrangente para análise e comparação de técnicas de
+            detecção e prevenção. Ao reunir diferentes métodos, classificar sua eficácia contra múltiplos vetores de
+            ataque e destacar lacunas técnicas, o estudo fornece uma base sólida para o desenvolvimento de novas
+            soluções. Essa contribuição é especialmente relevante em um contexto onde aplicações web continuam sendo
+            alvos frequentes e onde a sofisticação dos ataques exige defesas mais robustas, automatizadas e com maior
+            capacidade de generalização.
+        </p>
+    </div>
+    <footer class="footer">
+        <p>© 2025 LABIT. Todos os direitos reservados.</p>
+    </footer>
+</body>
+
+</html>

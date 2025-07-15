@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
 </head>
+
 <body>
 
   <!-- NAVBAR -->
@@ -24,9 +26,9 @@
       <li><i class="bi bi-envelope"></i> CONTATO</li>
     </ul>
     <div class="nav-search">
-    <i class="bi bi-search"></i>
-    <input type="text" placeholder="Buscar...">
-  </div>
+      <i class="bi bi-search"></i>
+      <input type="text" placeholder="Buscar...">
+    </div>
   </nav>
 
   <!-- CARD COM CONTEÚDO -->
@@ -34,29 +36,55 @@
     <section class="breadcrumb">
       ARTIGOS / SEGURANÇA DA INFORMAÇÃO / PROMPT INJECTION
     </section>
+    <div style="margin: 18px 0 30px 0;">
+      <a href="../index.html" style="color:#446de1; font-weight:600; text-decoration:none; font-size:1.1em;"><i
+          class="bi bi-arrow-left"></i> Voltar ao Início</a>
+    </div>
 
     <h2>Fichamento do artigo: “InjectBench: An Indirect Prompt Injection Benchmarking Framework”</h2>
 
     <div class="meta">
-    <span><i class="bi bi-calendar-event"></i> 05 de junho de 2025</span>
-    <span><i class="bi bi-at"></i>labit.ufpa</span>
-  </div>
+      <span><i class="bi bi-calendar-event"></i> 05 de junho de 2025</span>
+      <span><i class="bi bi-at"></i>labit.ufpa</span>
+    </div>
 
-  <hr class="divider">
+    <hr class="divider">
 
     <p>
-      O artigo <strong>“InjectBench: An Indirect Prompt Injection Benchmarking Framework”</strong> foi desenvolvido e escrito pelo pesquisador Nicholas Ka-Shing Kong, além de ter sido publicado na <i>Virginia Tech</i> em 2024 e disponibilizado de forma online.  
+      O artigo <strong>“InjectBench: An Indirect Prompt Injection Benchmarking Framework”</strong> foi desenvolvido e
+      escrito pelo pesquisador Nicholas Ka-Shing Kong, além de ter sido publicado na <i>Virginia Tech</i> em 2024 e
+      disponibilizado de forma online.
     </p>
     <p>
-      Os Grandes Modelos de Linguagem (LLMs) como ChatGPT e Llama, apesar de sua capacidade em tarefas textuais, enfrentam uma limitação própria: seu conhecimento é restrito à "data de corte" de seus dados de treinamento, impedindo respostas atualizadas e podendo gerar alucinações, que seria o tempo que esse modelo é treinado. Para contornar a limitação de dados, surgem as aplicações aumentadas de LLM, conhecidas como Plugins. Eles permitem o acesso a informações externas e serviços. No entanto, essa integração introduz um grave risco: ataque de injeção indireta de prompt. Nela, atacantes podem inserir comandos maliciosos em dados externos, explorando a incapacidade do LLM de diferenciar instruções de conteúdo. 
+      Os Grandes Modelos de Linguagem (LLMs) como ChatGPT e Llama, apesar de sua capacidade em tarefas textuais,
+      enfrentam uma limitação própria: seu conhecimento é restrito à "data de corte" de seus dados de treinamento,
+      impedindo respostas atualizadas e podendo gerar alucinações, que seria o tempo que esse modelo é treinado. Para
+      contornar a limitação de dados, surgem as aplicações aumentadas de LLM, conhecidas como Plugins. Eles permitem o
+      acesso a informações externas e serviços. No entanto, essa integração introduz um grave risco: ataque de injeção
+      indireta de prompt. Nela, atacantes podem inserir comandos maliciosos em dados externos, explorando a incapacidade
+      do LLM de diferenciar instruções de conteúdo.
     </p>
     <p>
-      A pesquisa sobre injeções indiretas de prompt enfrenta dois grandes desafios: a escassez de benchmarks robustos para sua análise qualitativa, já que os estudos focam mais em ataques diretos ou demonstrações; e a ineficácia dos classificadores atuais, que falham em detectar consequências como manipulação de conteúdo ou fraude por priorizarem apenas toxicidade. Para preencher essas falhas, o artigo propõe uma estrutura automatizada. Ela permite gerar amostras de ataque que induzem <i>jailbreak</i> em cenários indiretos, facilitando o desenvolvimento e melhores de defesas. A estrutura é generalizável e foi usada para criar um dataset público de 1670 amostras, que serve como base para o estudo de ataques e defesas em diversos LLMs.
+      A pesquisa sobre injeções indiretas de prompt enfrenta dois grandes desafios: a escassez de benchmarks robustos
+      para sua análise qualitativa, já que os estudos focam mais em ataques diretos ou demonstrações; e a ineficácia dos
+      classificadores atuais, que falham em detectar consequências como manipulação de conteúdo ou fraude por
+      priorizarem apenas toxicidade. Para preencher essas falhas, o artigo propõe uma estrutura automatizada. Ela
+      permite gerar amostras de ataque que induzem <i>jailbreak</i> em cenários indiretos, facilitando o desenvolvimento
+      e melhores de defesas. A estrutura é generalizável e foi usada para criar um dataset público de 1670 amostras, que
+      serve como base para o estudo de ataques e defesas em diversos LLMs.
     </p>
     <p>
-      O InjectBench oferece um conjunto de dados público para benchmarking de ataques em tarefas de sumarização, com foco em  manipulação de conteúdo, indisponibilidade e fraude/malware. Além de ser uma ferramenta para avaliação, ele funciona como uma estrutura flexível de ataque sintético, permitindo a criação e personalização de amostras de ataques. Utilizando estratégias de avaliação baseadas em LLMs, validadas por humanos, o InjectBench mede a qualidade das instruções maliciosas e o sucesso dos ataques. O estudo também realiza uma análise detalhada de ataques em quatro famílias de LLMs, identificando suas vulnerabilidades, e investiga defesas preliminares. Os resultados indicam que é possível identificar ameaças com boa precisão e reduzir significativamente o sucesso dos ataques usando técnicas de detecção e amostragem aleatória, sem comprometer a utilidade do modelo.
+      O InjectBench oferece um conjunto de dados público para benchmarking de ataques em tarefas de sumarização, com
+      foco em manipulação de conteúdo, indisponibilidade e fraude/malware. Além de ser uma ferramenta para avaliação,
+      ele funciona como uma estrutura flexível de ataque sintético, permitindo a criação e personalização de amostras de
+      ataques. Utilizando estratégias de avaliação baseadas em LLMs, validadas por humanos, o InjectBench mede a
+      qualidade das instruções maliciosas e o sucesso dos ataques. O estudo também realiza uma análise detalhada de
+      ataques em quatro famílias de LLMs, identificando suas vulnerabilidades, e investiga defesas preliminares. Os
+      resultados indicam que é possível identificar ameaças com boa precisão e reduzir significativamente o sucesso dos
+      ataques usando técnicas de detecção e amostragem aleatória, sem comprometer a utilidade do modelo.
     </p>
-    <P>Na imagem abaixo é demostrado um exemplo de ataque  de  injeção  indireta  de  prompt  em  uma  tarefa  de  sumarização.<P>
+    <P>Na imagem abaixo é demostrado um exemplo de ataque de injeção indireta de prompt em uma tarefa de sumarização.
+    <P>
     <figure style="text-align:center; margin: 20px 0;">
       <img src="indirect injection.png" alt="indirect injection" style="width:65%; height:auto;">
       <figcaption style="font-size: 0.9em; color: #555; margin-top: 8px;">
@@ -64,23 +92,34 @@
       </figcaption>
     </figure>
     <p>
-      O modelo de ameaça para injeções indiretas de prompt aborda um cenário no qual um plugin confiável interage com recursos de terceiros não confiáveis. Esse cenário é focado na sumarização de conteúdo online, onde um invasor insere instruções maliciosas em um site que será processado pelo LLM (via plugin), resultando em uma resposta falsa ou manipulada para o usuário. Os objetivos do atacante envolvem a disseminação de desinformação por meio de três tipos de ataques:
-      
-        <li style="margin-left: 20px; margin-bottom: 1em;">
-            Manipulação de conteúdo, alterando sutilmente a narrativa do resumo;
-        </li>
-        <li style="margin-left: 20px; margin-bottom: 1em;">
-            Indisponibilidade, bloqueando falsamente o acesso à informação original;
-        </li>
-        <li style="margin-left: 20px; margin-bottom: 1em;">
-            Fraude/malware, coagindo o usuário a clicar em links maliciosos tematicamente relacionados.
-        </li>
+      O modelo de ameaça para injeções indiretas de prompt aborda um cenário no qual um plugin confiável interage com
+      recursos de terceiros não confiáveis. Esse cenário é focado na sumarização de conteúdo online, onde um invasor
+      insere instruções maliciosas em um site que será processado pelo LLM (via plugin), resultando em uma resposta
+      falsa ou manipulada para o usuário. Os objetivos do atacante envolvem a disseminação de desinformação por meio de
+      três tipos de ataques:
+
+      <li style="margin-left: 20px; margin-bottom: 1em;">
+        Manipulação de conteúdo, alterando sutilmente a narrativa do resumo;
+      </li>
+      <li style="margin-left: 20px; margin-bottom: 1em;">
+        Indisponibilidade, bloqueando falsamente o acesso à informação original;
+      </li>
+      <li style="margin-left: 20px; margin-bottom: 1em;">
+        Fraude/malware, coagindo o usuário a clicar em links maliciosos tematicamente relacionados.
+      </li>
     </p>
     <p>
-        O invasor tem a capacidade de injetar instruções em sites externos, mas não pode alterar o plugin, assim o foco é na manipulação da resposta do plugin ao usuário final.
+      O invasor tem a capacidade de injetar instruções em sites externos, mas não pode alterar o plugin, assim o foco é
+      na manipulação da resposta do plugin ao usuário final.
     </p>
     <p>
-        O artigo faz uma revisão de literatura sobre injeções indiretas de prompt em LLMs, destacando tipos de ataques e defesas existentes. Os ataques incluem Jailbreaking, que contorna as medidas de segurança dos LLMs para gerar conteúdo prejudicial, Injeção de Prompt Padrão, que substitui a instrução original do LLM, e Vazamento de Prompt, que busca revelar informações sensíveis sobre o sistema. A defesa contra esses ataques é abordada em duas categorias principais: soluções integradas, como o Aprendizado por Reforço com Feedback Humano (RLHF), que ajusta os pesos do modelo para maior segurança, e soluções externas, que incluem defesas de detecção (identificação de entradas maliciosas) e resilientes (mitigação dos efeitos dos ataques).
+      O artigo faz uma revisão de literatura sobre injeções indiretas de prompt em LLMs, destacando tipos de ataques e
+      defesas existentes. Os ataques incluem Jailbreaking, que contorna as medidas de segurança dos LLMs para gerar
+      conteúdo prejudicial, Injeção de Prompt Padrão, que substitui a instrução original do LLM, e Vazamento de Prompt,
+      que busca revelar informações sensíveis sobre o sistema. A defesa contra esses ataques é abordada em duas
+      categorias principais: soluções integradas, como o Aprendizado por Reforço com Feedback Humano (RLHF), que ajusta
+      os pesos do modelo para maior segurança, e soluções externas, que incluem defesas de detecção (identificação de
+      entradas maliciosas) e resilientes (mitigação dos efeitos dos ataques).
     </p>
     </p><strong> InjectBench </strong></p>
     <figure style="text-align:center; margin: 20px 0;">
@@ -88,131 +127,213 @@
       <figcaption style="font-size: 0.9em; color: #555; margin-top: 8px;">
         Figura 2. Fonte: Artigo "InjectBench: An Indirect Prompt Injection Benchmarking Framework", 2024.
       </figcaption>
-    </figure> 
+    </figure>
     <p>
-        O artigo propõe o InjectBench, uma estrutura que permite à comunidade criar e avaliar ataques de injeção indireta de prompt em qualquer conjunto de dados textuais. A estrutura é composta por três componentes principais: a criação de amostras de ataque, uma camada de defesa modular e um método de avaliação.
-        <li style="margin-left: 20px; margin-bottom: 1em; line-height: 1.8;">
-            <strong>Componente Benigno: </strong> Simula um texto padrão de site, tornando o ataque mais difícil de detectar ao parecer uma entrada normal no fluxo de dados do LLM;
-        </li>
-        <li style="margin-left: 20px; margin-bottom: 1em; line-height: 1.8;">
-            <strong>Componente Separador:</strong> Cria uma quebra de contexto entre os prompts do sistema e a instrução maliciosa, facilitando a interpretação da instrução como um comando direto.
-        </li>
-        <li style="margin-left: 20px; margin-bottom: 1em; line-height: 1.8;">
-            <strong>Instrução Maliciosa:</strong> Busca manipular o conteúdo, afetar a disponibilidade ou fornecer links fraudulentos.
-        </li>
+      O artigo propõe o InjectBench, uma estrutura que permite à comunidade criar e avaliar ataques de injeção indireta
+      de prompt em qualquer conjunto de dados textuais. A estrutura é composta por três componentes principais: a
+      criação de amostras de ataque, uma camada de defesa modular e um método de avaliação.
+      <li style="margin-left: 20px; margin-bottom: 1em; line-height: 1.8;">
+        <strong>Componente Benigno: </strong> Simula um texto padrão de site, tornando o ataque mais difícil de detectar
+        ao parecer uma entrada normal no fluxo de dados do LLM;
+      </li>
+      <li style="margin-left: 20px; margin-bottom: 1em; line-height: 1.8;">
+        <strong>Componente Separador:</strong> Cria uma quebra de contexto entre os prompts do sistema e a instrução
+        maliciosa, facilitando a interpretação da instrução como um comando direto.
+      </li>
+      <li style="margin-left: 20px; margin-bottom: 1em; line-height: 1.8;">
+        <strong>Instrução Maliciosa:</strong> Busca manipular o conteúdo, afetar a disponibilidade ou fornecer links
+        fraudulentos.
+      </li>
     </p>
     <p><strong>Metodologia</strong></p>
     <p>
-        A metodologia utilizada pelo artigo se divide em três partes que serão explicadas a seguir:
-        <li style="margin-left: 20px; margin-bottom: 1em; line-height: 1.8; text-align: justify;">
-            <strong>Componente Benigno</strong> 
-            <br>
-            O componente benigno de cada amostra representa o conteúdo normal do site. A pesquisa utilizou conjuntos de dados específicos com informações sensíveis, mais propensos a serem alvos de injeções indiretas de prompt. Esses conjuntos incluem:
-            <br>
-                <strong>- CC-News:</strong> Artigos de notícias em inglês.
-            <br>
-                <strong>- FAQIR:</strong> Pares de perguntas e respostas do Yahoo! Answers.
-            <br>
-                <strong>- WikiHow:</strong> Artigos da base de conhecimento online.
-            <br>
-                <strong>- {R}ecipe{NLG}:</strong> Conjunto de dados de receitas.
-            <br>
-                <strong>- Amazon Review Data:</strong> Avaliações de produtos de beleza.
-            <br>
-            Esses conjuntos foram escolhidos por sua qualidade e confiabilidade, garantindo que o conteúdo seja seguro e livre de instruções maliciosas pré-existentes. A metodologia do InjectBench seria, então, adaptável a qualquer conjunto de dados da web.
-        </li>
-        <li style="margin-left: 20px; margin-bottom: 1em; line-height: 1.8; text-align: justify;">
-            <strong>Componente Separador</strong> 
+      A metodologia utilizada pelo artigo se divide em três partes que serão explicadas a seguir:
+      <li style="margin-left: 20px; margin-bottom: 1em; line-height: 1.8; text-align: justify;">
+        <strong>Componente Benigno</strong>
         <br>
-            O componente separador é muito importante para fazer o LLM diferenciar claramente o contexto do conteúdo benigno da instrução maliciosa, aumentando a eficácia do ataque. Enquanto trabalhos anteriores usam instruções ou delimitadores de caracteres especiais, esta pesquisa explora um separador específico de tarefa. A ideia é que, uma vez que o plugin conclua a tarefa inicial (como sumarizar um texto), ele seguirá a instrução subsequente, que é a instrução do atacante. Para o cenário de sumarização, o resumo do texto benigno é usado literalmente como separador, denominado Separador de Resumo.
-    <figure style="text-align:center; margin: 20px 0;">
-      <img src="tipos de sepadores.png" alt="tipos de separadores" style="width:70%; height:auto;">
-      <figcaption style="font-size: 0.9em; color: #555; margin-top: 8px;">
-        Figura 4. Fonte: Artigo "InjectBench: An Indirect Prompt Injection Benchmarking Framework", 2024.
-      </figcaption>
-    </figure>
-        </li>
-        <li style="margin-left: 20px; margin-bottom: 1em; line-height: 1.8; text-align: justify;">
-            <strong>Geração e Seleção de Instruções Maliciosas</strong> 
-            <br>
-            Uma abordagem eficaz para ataques indiretos de injeção rápida envolve inserir instruções de malware diretamente no conteúdo de um site, mantendo uma conexão temática com o texto. O InjectBench utiliza essa técnica ao explorar a capacidade de raciocínio dos LLMs para gerar instruções maliciosas contextualizadas. O modelo Vicuna 13B V1.1 foi selecionado por sua habilidade em gerar instruções maliciosas consistentes, comparáveis ao ChatGPT, embora seja de menor porte.
+        O componente benigno de cada amostra representa o conteúdo normal do site. A pesquisa utilizou conjuntos de
+        dados específicos com informações sensíveis, mais propensos a serem alvos de injeções indiretas de prompt. Esses
+        conjuntos incluem:
+        <br>
+        <strong>- CC-News:</strong> Artigos de notícias em inglês.
+        <br>
+        <strong>- FAQIR:</strong> Pares de perguntas e respostas do Yahoo! Answers.
+        <br>
+        <strong>- WikiHow:</strong> Artigos da base de conhecimento online.
+        <br>
+        <strong>- {R}ecipe{NLG}:</strong> Conjunto de dados de receitas.
+        <br>
+        <strong>- Amazon Review Data:</strong> Avaliações de produtos de beleza.
+        <br>
+        Esses conjuntos foram escolhidos por sua qualidade e confiabilidade, garantindo que o conteúdo seja seguro e
+        livre de instruções maliciosas pré-existentes. A metodologia do InjectBench seria, então, adaptável a qualquer
+        conjunto de dados da web.
+      </li>
+      <li style="margin-left: 20px; margin-bottom: 1em; line-height: 1.8; text-align: justify;">
+        <strong>Componente Separador</strong>
+        <br>
+        O componente separador é muito importante para fazer o LLM diferenciar claramente o contexto do conteúdo benigno
+        da instrução maliciosa, aumentando a eficácia do ataque. Enquanto trabalhos anteriores usam instruções ou
+        delimitadores de caracteres especiais, esta pesquisa explora um separador específico de tarefa. A ideia é que,
+        uma vez que o plugin conclua a tarefa inicial (como sumarizar um texto), ele seguirá a instrução subsequente,
+        que é a instrução do atacante. Para o cenário de sumarização, o resumo do texto benigno é usado literalmente
+        como separador, denominado Separador de Resumo.
+        <figure style="text-align:center; margin: 20px 0;">
+          <img src="tipos de sepadores.png" alt="tipos de separadores" style="width:70%; height:auto;">
+          <figcaption style="font-size: 0.9em; color: #555; margin-top: 8px;">
+            Figura 4. Fonte: Artigo "InjectBench: An Indirect Prompt Injection Benchmarking Framework", 2024.
+          </figcaption>
+        </figure>
+      </li>
+      <li style="margin-left: 20px; margin-bottom: 1em; line-height: 1.8; text-align: justify;">
+        <strong>Geração e Seleção de Instruções Maliciosas</strong>
+        <br>
+        Uma abordagem eficaz para ataques indiretos de injeção rápida envolve inserir instruções de malware diretamente
+        no conteúdo de um site, mantendo uma conexão temática com o texto. O InjectBench utiliza essa técnica ao
+        explorar a capacidade de raciocínio dos LLMs para gerar instruções maliciosas contextualizadas. O modelo Vicuna
+        13B V1.1 foi selecionado por sua habilidade em gerar instruções maliciosas consistentes, comparáveis ao ChatGPT,
+        embora seja de menor porte.
 
-            Para contornar as medidas de segurança ao gerar essas instruções, foi utilizado o método Evil Confidant Jailbreak. Em seguida, o modelo é alimentado com prompts específicos aplicados a amostras de dados benignos para gerar cinco possíveis instruções maliciosas. Esse processo aprimora a qualidade linguística das instruções e facilita a análise por expressões regulares. O conteúdo do site é inserido dinamicamente no prompt, substituindo o espaço reservado «COMPONENTE BENIGNO».
+        Para contornar as medidas de segurança ao gerar essas instruções, foi utilizado o método Evil Confidant
+        Jailbreak. Em seguida, o modelo é alimentado com prompts específicos aplicados a amostras de dados benignos para
+        gerar cinco possíveis instruções maliciosas. Esse processo aprimora a qualidade linguística das instruções e
+        facilita a análise por expressões regulares. O conteúdo do site é inserido dinamicamente no prompt, substituindo
+        o espaço reservado «COMPONENTE BENIGNO».
 
-            Por fim, o modelo Mistral 7B Instruct V0.2 é empregado para selecionar a melhor instrução, atribuindo uma pontuação de 0 a 10 a cada critério de qualidade. As instruções com uma soma ponderada inferior a 5 são filtradas, garantindo que apenas as mais eficazes sejam escolhidas para os ataques.
-        </li>
+        Por fim, o modelo Mistral 7B Instruct V0.2 é empregado para selecionar a melhor instrução, atribuindo uma
+        pontuação de 0 a 10 a cada critério de qualidade. As instruções com uma soma ponderada inferior a 5 são
+        filtradas, garantindo que apenas as mais eficazes sejam escolhidas para os ataques.
+      </li>
     <figure style="text-align:center; margin: 20px 0;">
       <img src="exemplos de prompt.png" alt="exemplos de prompt" style="width:65%; height:auto;">
       <figcaption style="font-size: 0.9em; color: #555; margin-top: 8px;">
         Figura 5. Fonte: Artigo "InjectBench: An Indirect Prompt Injection Benchmarking Framework", 2024.
       </figcaption>
-    </figure>    
+    </figure>
     <p><strong>Validações</strong></p>
-    <p> 
-        As validações são essenciais para garantir que o InjectBench produza amostras de alta qualidade e eficazes para testar ataques de injeção indireta de prompt em LLMs e que os componentes benignos e separadores não contenham instruções maliciosas, sendo representativos dos dados reais da web. No entanto, a validação das instruções maliciosas exige uma análise mais rigorosa. Após gerar 120 instruções, essas foram avaliadas e categorizadas como válidas ou inválidas, com um filtro de pontuação abaixo de 5, que resultou em melhores instruções.
+    <p>
+      As validações são essenciais para garantir que o InjectBench produza amostras de alta qualidade e eficazes para
+      testar ataques de injeção indireta de prompt em LLMs e que os componentes benignos e separadores não contenham
+      instruções maliciosas, sendo representativos dos dados reais da web. No entanto, a validação das instruções
+      maliciosas exige uma análise mais rigorosa. Após gerar 120 instruções, essas foram avaliadas e categorizadas como
+      válidas ou inválidas, com um filtro de pontuação abaixo de 5, que resultou em melhores instruções.
     </p>
     <p>
-        Para a avaliação da qualidade, geraram-se 700 amostras para três categorias de ataque: disponibilidade, fraude/malware e conteúdo manipulado. Após filtragem, 15% a 26% das amostras foram descartadas, mas as restantes foram consideradas de alta qualidade. A avaliação foi realizada usando um modelo de LLM ajustado, com um método de classificação de "sim" ou "não", e a precisão foi de 0,799 ao comparar a avaliação automatizada com a humana.
-        Em comparação com outros estudos, o InjectBench apresentou uma boa precisão, com 1,000 de precisão entre o avaliador humano e a avaliação automatizada, mostrando que a métrica é eficaz para a avaliação em larga escala. A análise também revelou que a precisão do modelo de avaliação pode ser ajustada para preferências pessoais, garantindo uma avaliação confiável e escalável.
+      Para a avaliação da qualidade, geraram-se 700 amostras para três categorias de ataque: disponibilidade,
+      fraude/malware e conteúdo manipulado. Após filtragem, 15% a 26% das amostras foram descartadas, mas as restantes
+      foram consideradas de alta qualidade. A avaliação foi realizada usando um modelo de LLM ajustado, com um método de
+      classificação de "sim" ou "não", e a precisão foi de 0,799 ao comparar a avaliação automatizada com a humana.
+      Em comparação com outros estudos, o InjectBench apresentou uma boa precisão, com 1,000 de precisão entre o
+      avaliador humano e a avaliação automatizada, mostrando que a métrica é eficaz para a avaliação em larga escala. A
+      análise também revelou que a precisão do modelo de avaliação pode ser ajustada para preferências pessoais,
+      garantindo uma avaliação confiável e escalável.
     </p>
     <figure style="text-align:center; margin: 20px 0;">
       <img src="exemplo de validação.png" alt="exemplo de validação" style="width:65%; height:auto;">
       <figcaption style="font-size: 0.9em; color: #555; margin-top: 8px;">
         Figura 6. Fonte: Artigo "InjectBench: An Indirect Prompt Injection Benchmarking Framework", 2024.
       </figcaption>
-    </figure>    
+    </figure>
     <p><strong>Validação dos LLMs no InjectBench</strong></p>
     <p>
-        A pesquisa vai analisar o desempenho dos LLMs em ataques de injeção indireta de prompt, incluindo o impacto do componente separador e as modificações nas instruções maliciosas.
-        <br>
-        <strong>Configurações do Experimento: </strong> Foram selecionadas 300 amostras de ataque, com 100 amostras para cada uma das três categorias: manipulação de conteúdo, disponibilidade e fraude/malware. Quatro LLMs foram avaliados: Mistral 7B, Llama-2 Chat 13B, Vicuna 33B v1.3 e Llama-1 7B. A avaliação do sucesso dos ataques foi feita com a métrica Taxa de Sucesso do Ataque (ASR).
-        <br>
-        <strong>Resultados de Sucesso dos Ataques:</strong> Ataques de disponibilidade e fraude/malware tiveram um ASR maior, sendo mais bem-sucedidos que os de manipulação de conteúdo. Modelos maiores, como Vicuna 33B e Llama-2, apresentaram um ASR mais alto, embora o Llama-2 tenha sido o mais suscetível a ataques, o que pode ser atribuído à sua capacidade de seguir instruções com mais precisão.
-        <br>
-        <strong>Impacto do Componente Separador:</strong> A eficácia dos separadores foi testada com 300 amostras. Separadores de foco, que mudam explicitamente a atenção do plugin, mostraram o melhor desempenho, com um ASR médio de 52,3%. No entanto, esses separadores foram mais facilmente detectados por sistemas de defesa como o LLMGuard (97% de taxa de detecção). Já separadores de resumo, mais sutis, tiveram uma taxa de detecção de 36%, mas ainda assim mantiveram um ASR relativamente alto (46,9%).
-        <br>
-        <strong>Impacto das Modificações nas Instruções Maliciosas:</strong> A introdução de modificações nas instruções maliciosas diminuiu o ASR, especialmente em modelos maiores como Vicuna e Llama-2. Isso ocorre porque esses modelos são mais habilidosos em lidar com instruções complexas. Modelos menores como Mistral e Alpaca Llama apresentaram ASR mais baixo após as modificações, indicando que modelos maiores são mais suscetíveis a estratégias de injeção mais refinadas.
-        <br>
-        Em resumo, separadores de foco são eficazes para ataques, mas podem ser facilmente detectados, enquanto separadores de resumo oferecem uma abordagem mais furtiva, mantendo um bom ASR. As modificações nas instruções maliciosas tiveram menos impacto em modelos maiores, mas reduziram o sucesso dos ataques.
+      A pesquisa vai analisar o desempenho dos LLMs em ataques de injeção indireta de prompt, incluindo o impacto do
+      componente separador e as modificações nas instruções maliciosas.
+      <br>
+      <strong>Configurações do Experimento: </strong> Foram selecionadas 300 amostras de ataque, com 100 amostras para
+      cada uma das três categorias: manipulação de conteúdo, disponibilidade e fraude/malware. Quatro LLMs foram
+      avaliados: Mistral 7B, Llama-2 Chat 13B, Vicuna 33B v1.3 e Llama-1 7B. A avaliação do sucesso dos ataques foi
+      feita com a métrica Taxa de Sucesso do Ataque (ASR).
+      <br>
+      <strong>Resultados de Sucesso dos Ataques:</strong> Ataques de disponibilidade e fraude/malware tiveram um ASR
+      maior, sendo mais bem-sucedidos que os de manipulação de conteúdo. Modelos maiores, como Vicuna 33B e Llama-2,
+      apresentaram um ASR mais alto, embora o Llama-2 tenha sido o mais suscetível a ataques, o que pode ser atribuído à
+      sua capacidade de seguir instruções com mais precisão.
+      <br>
+      <strong>Impacto do Componente Separador:</strong> A eficácia dos separadores foi testada com 300 amostras.
+      Separadores de foco, que mudam explicitamente a atenção do plugin, mostraram o melhor desempenho, com um ASR médio
+      de 52,3%. No entanto, esses separadores foram mais facilmente detectados por sistemas de defesa como o LLMGuard
+      (97% de taxa de detecção). Já separadores de resumo, mais sutis, tiveram uma taxa de detecção de 36%, mas ainda
+      assim mantiveram um ASR relativamente alto (46,9%).
+      <br>
+      <strong>Impacto das Modificações nas Instruções Maliciosas:</strong> A introdução de modificações nas instruções
+      maliciosas diminuiu o ASR, especialmente em modelos maiores como Vicuna e Llama-2. Isso ocorre porque esses
+      modelos são mais habilidosos em lidar com instruções complexas. Modelos menores como Mistral e Alpaca Llama
+      apresentaram ASR mais baixo após as modificações, indicando que modelos maiores são mais suscetíveis a estratégias
+      de injeção mais refinadas.
+      <br>
+      Em resumo, separadores de foco são eficazes para ataques, mas podem ser facilmente detectados, enquanto
+      separadores de resumo oferecem uma abordagem mais furtiva, mantendo um bom ASR. As modificações nas instruções
+      maliciosas tiveram menos impacto em modelos maiores, mas reduziram o sucesso dos ataques.
     </p>
     <p><strong>Defesas</strong></p>
     <p>
-        Foram propostas dois tipos de defesas contra injeções indiretas de prompt: defesas de detecção e defesas resilientes. No qual, a defesa de detecção busca aprimorar as estratégias existentes, permitindo que o LLM identifique e repita instruções maliciosas embutidas no texto, aproveitando sua capacidade de raciocínio. No entanto, modelos menores podem parafrasear essas instruções. Essa estratégia precisa de mais treinamento, especialmente para modelos menores.
-        <br>
-        Para defesas resilientes, foi proposta uma abordagem baseada em amostragem aleatória de frases e geração de resumos, mantendo o tema central consistente e minimizando a influência de instruções maliciosas. Dois métodos foram testados: sumarização LLM, que usa o próprio LLM para resumir, e agregação de incorporação semântica (SEA), que codifica os resumos e retorna a codificação mais próxima da média. A amostragem aleatória foi considerada mais forte que a marcação de dados, proporcionando uma defesa eficaz, mas com alguma perda de informação, o que impacta a qualidade dos resumos.
+      Foram propostas dois tipos de defesas contra injeções indiretas de prompt: defesas de detecção e defesas
+      resilientes. No qual, a defesa de detecção busca aprimorar as estratégias existentes, permitindo que o LLM
+      identifique e repita instruções maliciosas embutidas no texto, aproveitando sua capacidade de raciocínio. No
+      entanto, modelos menores podem parafrasear essas instruções. Essa estratégia precisa de mais treinamento,
+      especialmente para modelos menores.
+      <br>
+      Para defesas resilientes, foi proposta uma abordagem baseada em amostragem aleatória de frases e geração de
+      resumos, mantendo o tema central consistente e minimizando a influência de instruções maliciosas. Dois métodos
+      foram testados: sumarização LLM, que usa o próprio LLM para resumir, e agregação de incorporação semântica (SEA),
+      que codifica os resumos e retorna a codificação mais próxima da média. A amostragem aleatória foi considerada mais
+      forte que a marcação de dados, proporcionando uma defesa eficaz, mas com alguma perda de informação, o que impacta
+      a qualidade dos resumos.
     </p>
     <figure style="text-align:center; margin: 20px 0;">
       <img src="prompt de defesa.png" alt="exemplo de validação de defesa" style="width:65%; height:auto;">
       <figcaption style="font-size: 0.9em; color: #555; margin-top: 8px;">
         Figura 7. Fonte: Artigo "InjectBench: An Indirect Prompt Injection Benchmarking Framework", 2024.
       </figcaption>
-    </figure> 
+    </figure>
     <p><strong>Avaliação das Defesas no InjectBench</strong></p>
     <p>
-        As defesas de detecção têm o objetivo de identificar instruções maliciosas no texto recuperado. Foram analisadas três abordagens: Defesa Proativa, LLMGuard e a Defesa de Identificação de Instrução baseada em LLM. A defesa de identificação assume um cenário ideal, onde o defensor conhece as categorias de ataque. No experimento, um total de 150 amostras foi dividido igualmente entre ataques e amostras benignas. Para os testes, foram utilizados modelos-vítima e o GPT-3.5 da OpenAI, além do LLMGuard baseado em DeBERTa. A métrica principal para avaliação foi a precisão.
+      As defesas de detecção têm o objetivo de identificar instruções maliciosas no texto recuperado. Foram analisadas
+      três abordagens: Defesa Proativa, LLMGuard e a Defesa de Identificação de Instrução baseada em LLM. A defesa de
+      identificação assume um cenário ideal, onde o defensor conhece as categorias de ataque. No experimento, um total
+      de 150 amostras foi dividido igualmente entre ataques e amostras benignas. Para os testes, foram utilizados
+      modelos-vítima e o GPT-3.5 da OpenAI, além do LLMGuard baseado em DeBERTa. A métrica principal para avaliação foi
+      a precisão.
     </p>
     <p>
-      Dentre as defesas existentes, a Proactive Generation foi eficaz na identificação de instruções maliciosas, mas gerou falsos positivos, enquanto a Proactive Ignorance falhou em repetir códigos secretos e o LLMGuard foi ineficaz devido a dados de treinamento inadequados para detectar ataques de injeção de prompt.
+      Dentre as defesas existentes, a Proactive Generation foi eficaz na identificação de instruções maliciosas, mas
+      gerou falsos positivos, enquanto a Proactive Ignorance falhou em repetir códigos secretos e o LLMGuard foi
+      ineficaz devido a dados de treinamento inadequados para detectar ataques de injeção de prompt.
     </p>
     <p>
-      A defesa proposta, o Localizador de Instruções baseado em LLM, demonstrou uma precisão de 78%, superando os métodos anteriores. No entanto, para modelos menores, essa abordagem tende a parafrasear as instruções em vez de repeti-las literalmente, o que limita sua eficácia.
+      A defesa proposta, o Localizador de Instruções baseado em LLM, demonstrou uma precisão de 78%, superando os
+      métodos anteriores. No entanto, para modelos menores, essa abordagem tende a parafrasear as instruções em vez de
+      repeti-las literalmente, o que limita sua eficácia.
     </p>
     <p>
-      Em relação às defesas resilientes, que visam reduzir o impacto de instruções maliciosas sem identificá-las explicitamente, o experimento utilizou 300 amostras de ataque. Quatro modelos diferentes foram empregados: Mistral 7B, Llama-2 Chat 13B, Vicuna 33B v1.3 e Llama-1 7B. A principal métrica de avaliação foi a Taxa de Sucesso do Ataque (ASR), complementada pela pontuação ROUGE-1 para analisar a qualidade dos resumos produzidos.
+      Em relação às defesas resilientes, que visam reduzir o impacto de instruções maliciosas sem identificá-las
+      explicitamente, o experimento utilizou 300 amostras de ataque. Quatro modelos diferentes foram empregados: Mistral
+      7B, Llama-2 Chat 13B, Vicuna 33B v1.3 e Llama-1 7B. A principal métrica de avaliação foi a Taxa de Sucesso do
+      Ataque (ASR), complementada pela pontuação ROUGE-1 para analisar a qualidade dos resumos produzidos.
     </p>
     <p>
-      A Marcação de Dados foi eficaz na redução do ASR em modelos como Llama-2 e Llama-1, mas teve pouco impacto no Mistral 7B; entre as defesas propostas, a Amostragem Aleatória se destacou, diminuindo o ASR em 45,6% com Llama-2, embora causasse perda de informações, enquanto a agregação de incorporação semântica teve resultados mistos.
+      A Marcação de Dados foi eficaz na redução do ASR em modelos como Llama-2 e Llama-1, mas teve pouco impacto no
+      Mistral 7B; entre as defesas propostas, a Amostragem Aleatória se destacou, diminuindo o ASR em 45,6% com Llama-2,
+      embora causasse perda de informações, enquanto a agregação de incorporação semântica teve resultados mistos.
     </p>
     <p>
-      Embora a Amostragem Aleatória tenha proporcionado uma defesa mais forte, ela causou uma perda considerável de dados. A Marcação de Dados, por outro lado, manteve melhor a utilidade do modelo sem grandes perdas, mostrando-se mais equilibrada em termos de defesa e preservação de informações.
+      Embora a Amostragem Aleatória tenha proporcionado uma defesa mais forte, ela causou uma perda considerável de
+      dados. A Marcação de Dados, por outro lado, manteve melhor a utilidade do modelo sem grandes perdas, mostrando-se
+      mais equilibrada em termos de defesa e preservação de informações.
     </p>
     <p><strong>Conclusão</strong></p>
     <p>
-        Fazendo uma relação, a pesquisa desenvolvida pelo autor pode ter um impacto direto no cenário de prompt injection, oferecendo uma estrutura robusta e automatizada para criar e avaliar ataques. O InjectBench permite não apenas simular ataques de injeção indireta, mas também testar a eficácia de defesas de detecção e resilientes, como o Localizador de Instruções baseado em LLM e a sumarização por amostragem aleatória. Com isso, a ferramenta pode acelerar o desenvolvimento de soluções para mitigar riscos de segurança em ambientes que utilizam LLMs, impactando diretamente na criação de sistemas mais seguros e robustos contra ataques maliciosos.
+      Fazendo uma relação, a pesquisa desenvolvida pelo autor pode ter um impacto direto no cenário de prompt injection,
+      oferecendo uma estrutura robusta e automatizada para criar e avaliar ataques. O InjectBench permite não apenas
+      simular ataques de injeção indireta, mas também testar a eficácia de defesas de detecção e resilientes, como o
+      Localizador de Instruções baseado em LLM e a sumarização por amostragem aleatória. Com isso, a ferramenta pode
+      acelerar o desenvolvimento de soluções para mitigar riscos de segurança em ambientes que utilizam LLMs, impactando
+      diretamente na criação de sistemas mais seguros e robustos contra ataques maliciosos.
     </p>
   </div>
-  <footer class="footer">
+  <footer class="footer" style="position:relative; bottom:0; width:100%; margin-top:40px;">
     <p>© 2025 LABIT. Todos os direitos reservados.</p>
   </footer>
 </body>
+
 </html>
