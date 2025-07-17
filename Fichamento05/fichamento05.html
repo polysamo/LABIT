@@ -43,7 +43,7 @@
         </div>
         <hr class="divider">
         <p style="text-align:justify;">
-            O artigo <strong>“Prompt-to-SQL Injections in LLM-Integrated Web Applications: Risks and Defenses”</strong> foi desenvolvido e escrito pelos pesquisadores Rodrigo-Geronimo Pedro, Daniel Castro, Paulo Carreira e Nuno Santos, sendo publicado na 47ª Conferência Internacional IEEE/ACM sobre Engenharia de Software (ICSE 2025). 
+            O artigo <strong>“Prompt-to-SQL Injections in LLM-Integrated Web Applications: Risks and Defenses”</strong> foi desenvolvido e escrito pelos pesquisadores Rodrigo Geronimo Pedro, Daniel Castro, Paulo Carreira e Nuno Santos, sendo publicado na 47ª Conferência Internacional IEEE/ACM sobre Engenharia de Software (ICSE 2025). 
         </p>
         <p style="text-align:justify;">
             Inicialmente, Grandes Modelos de Linguagem (LLMs) estão sendo cada vez mais integrados a aplicações web, como chatbots, para interagir com bancos de dados através de middlewares (softwares que atuam como uma ponte entre diferentes sistemas) como o <strong>Langchain</strong>. Essa arquitetura, que traduz perguntas em linguagem natural para consultas SQL, cria uma nova e perigosa vulnerabilidade de segurança: a injeção de prompt para SQL <strong>(P2SQL)</strong>. No qual, um invasor pode formular uma pergunta maliciosa que engana o LLM, fazendo-o gerar um código SQL perigoso, o que pode resultar em acesso não autorizado, roubo ou destruição de dados. Focado nesse risco, o artigo de pesquisa investiga sistematicamente os ataques P2SQL por meio de três questões centrais. 
@@ -54,7 +54,7 @@
             <br>
             <li style="margin-bottom: 0;"><strong>(RQ2) Até que ponto a eficácia dos ataques P2SQL dependedo LLM adotado em um aplicativo web?</strong></li>
             <br>
-            <li style="margin-bottom: 0;"><strong>(RQ3) Quais defesas podem prevenir ataquesP2SQL com eficácia e com esforço razoável para desenvolvedores de aplicações?</strong></li>
+            <li style="margin-bottom: 0;"><strong>(RQ3) Quais defesas podem prevenir ataques P2SQL com eficácia e com esforço razoável para desenvolvedores de aplicações?</strong></li>
         </ul>
         <p style="text-align:justify;">
             O principal objetivo do artigo é realizar um exame abrangente das injeções de prompt para SQL (P2SQL) em aplicações web que utilizam a estrutura Langchain. Usando-a como estudo de caso, os autores caracterizam os ataques P2SQL, explorando suas variantes e o impacto na segurança por meio de exemplos concretos.
@@ -198,7 +198,7 @@
             Para mitigar os riscos dos ataques P2SQL, os pesquisadores propuseram um de quatro defesas complementares. Cada técnica foca em um tipo diferente de ameaça, funcionando em conjunto para criar uma proteção em camadas, onde a falha de uma pode ser contida por outra.
         </p>
         <ul style="margin-left: 30px; text-align:justify;">
-            <li><strong>Endurecimento das Permissões do Banco de Dados :</strong> Ela consiste em difeente de dar ao chatbot acesso total, cria-se uma função (role) específica no banco de dados, por exemplo,<span
+            <li><strong>Fortalecimento das Permissões do Banco de Dados :</strong> Ela consiste em dar ao chatbot acesso total, cria-se uma função (role) específica no banco de dados, por exemplo,<span
                 style="font-style:italic; background:#f0f0f0; padding:2px 8px; border-radius:6px; font-family:monospace; font-size:1.12em;">MODE_CHATBOT</span>, com permissões estritamente de leitura. A aplicação passa a usar duas conexões: uma restrita para o chatbot e outra com privilégios normais para o resto das operações do sistema. Qualquer tentativa do LLM de gerar um comando para apagar, inserir ou modificar dados <span
                 style="font-style:italic; background:#f0f0f0; padding:2px 8px; border-radius:6px; font-family:monospace; font-size:1.12em;">(DROP, INSERT, UPDATE)</span> resultará em um erro de permissão negada diretamente no banco de dados.</li>
             <br>
@@ -219,7 +219,7 @@
             Para garantir que os testes fossem robustos e representativos do mundo real, a configuração experimental utilizada foi a utilização de e-commerce real que simula uma livraria, para testar que vulnerabilidades e defesas são aplicáveis a sistemas complexos. O banco de dados utilizado, PostgreSQL, foi populado com um conjunto de dados público da Amazon contendo mais de 200 mil livros e 2 milhões de avaliações, garantindo que os testes fossem realizados em uma escala realista. Além disso, os experimentos rodaram em um servidor potente (Intel Xeon Gold, 192GB RAM, 4 GPUs NVIDIA), utilizando Langchain com as mitigações implementadas (chamadas de "LangShield") e o modelo gpt-3.5-turbo-0301 da OpenAI.
         </p>
         <p style="text-align:justify;">
-            Na avaliação da eficácia foi realizada a confirmação da vulnerabilidade, em que os pesquisadores replicaram com sucesso todos os ataques (U.1, RD.1, RI.1, etc.) na aplicação da livraria sem nenhuma proteção. Em seguida, eles ativaram o portfólio de defesas e reexecutaram os mesmos ataques. Os resultados mostraram que a abordagem em camadas foi um sucesso pois ataques que tentavam modificar ou apagar dados foram bloqueados pelo <strong>Endurecimento de Permissões</strong>; ataques que tentavam vazar dados de outros usuários foram prevenidos pela <strong>Reescrita de Consultas e pelo Pré-carregamento de Dados.</strong>; e os ataques indiretos (envenenamento de dados) não deram certo por causa do <strong>LLM Guardião</strong>. Dessa forma, as quatro técnicas de defesa frustraram efetivamente todos os ataques identificados, provando a validade da abordagem de segurança em camadas, e também, as defesas propostas são eficientes e introduzem sobrecargas de modestas a insignificantes.
+            Na avaliação da eficácia foi realizada a confirmação da vulnerabilidade, em que os pesquisadores replicaram com sucesso todos os ataques (U.1, RD.1, RI.1, etc.) na aplicação da livraria sem nenhuma proteção. Em seguida, eles ativaram o portfólio de defesas e reexecutaram os mesmos ataques. Os resultados mostraram que a abordagem em camadas foi um sucesso pois ataques que tentavam modificar ou apagar dados foram bloqueados pelo <strong>Fortalecimento de Permissões</strong>; ataques que tentavam vazar dados de outros usuários foram prevenidos pela <strong>Reescrita de Consultas e pelo Pré-carregamento de Dados.</strong>; e os ataques indiretos (envenenamento de dados) não deram certo por causa do <strong>LLM Guardião</strong>. Dessa forma, as quatro técnicas de defesa frustraram efetivamente todos os ataques identificados, provando a validade da abordagem de segurança em camadas, e também, as defesas propostas são eficientes e introduzem sobrecargas de modestas a insignificantes.
         </p>
         <h3 style="color:#2d3a5a; margin-top:40px;">Conclusão</h3>
         <br>
