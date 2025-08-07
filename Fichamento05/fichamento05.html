@@ -52,7 +52,7 @@
             style="gap: 18px; margin: 30px 0 30px 0; padding-left: 24px; list-style: disc inside; font-size:1em; text-align:justify;">
             <li style="margin-bottom: 0;"><strong>(RQ1) Quais são as possíveis variantes de injeções P2SQL que podem ser lançadas em aplicativos integrados ao LLM e qual é o seu impacto na segurança do aplicativo?</strong></li>
             <br>
-            <li style="margin-bottom: 0;"><strong>(RQ2) Até que ponto a eficácia dos ataques P2SQL dependedo LLM adotado em um aplicativo web?</strong></li>
+            <li style="margin-bottom: 0;"><strong>(RQ2) Até que ponto a eficácia dos ataques P2SQL dependede do LLM adotado em um aplicativo web?</strong></li>
             <br>
             <li style="margin-bottom: 0;"><strong>(RQ3) Quais defesas podem prevenir ataques P2SQL com eficácia e com esforço razoável para desenvolvedores de aplicações?</strong></li>
         </ul>
@@ -148,7 +148,7 @@
             Estes são ataques indiretos, pois não exigem que o invasor interaja diretamente com o chatbot da vítima.
         </p>
         <ul style="margin-left: 30px; text-align:justify;">
-            <li><strong> Exemplo RI.1 (Manipulação da Resposta): </strong> Qunando o invasor acessa o banco de dados inserindo uma instrução maliciosa em um campo de texto comum (como uma avaliação de produto). Quando um usuário legítimo faz uma pergunta que lê esse dado, o LLM é sequestrado pela instrução e fornece uma resposta falsa, causando uma negação de serviço. </li>
+            <li><strong> Exemplo RI.1 (Manipulação da Resposta): </strong> Quando o invasor acessa o banco de dados inserindo uma instrução maliciosa em um campo de texto comum (como uma avaliação de produto). Quando um usuário legítimo faz uma pergunta que lê esse dado, o LLM vê essa instrução e fornece uma resposta falsa, causando uma negação de serviço. </li>
             <br>
             <li><strong> Exemplo RI.2 (Injeção Multi-etapas): </strong> Este ataque, possível apenas com os Agentes SQL, em que envolve modificar o banco de dados com um script complexo. Quando ativado, o script faz o Agente executar múltiplos comandos maliciosos em sequência (como alterar o e-mail de um usuário e depois esconder os rastros), demonstrando um nível de risco muito maior.
         </ul>
@@ -219,7 +219,7 @@
             Para garantir que os testes fossem robustos e representativos do mundo real, a configuração experimental utilizada foi a utilização de e-commerce real que simula uma livraria, para testar que vulnerabilidades e defesas são aplicáveis a sistemas complexos. O banco de dados utilizado, PostgreSQL, foi populado com um conjunto de dados público da Amazon contendo mais de 200 mil livros e 2 milhões de avaliações, garantindo que os testes fossem realizados em uma escala realista. Além disso, os experimentos rodaram em um servidor potente (Intel Xeon Gold, 192GB RAM, 4 GPUs NVIDIA), utilizando Langchain com as mitigações implementadas (chamadas de "LangShield") e o modelo gpt-3.5-turbo-0301 da OpenAI.
         </p>
         <p style="text-align:justify;">
-            Na avaliação da eficácia foi realizada a confirmação da vulnerabilidade, em que os pesquisadores replicaram com sucesso todos os ataques (U.1, RD.1, RI.1, etc.) na aplicação da livraria sem nenhuma proteção. Em seguida, eles ativaram o portfólio de defesas e reexecutaram os mesmos ataques. Os resultados mostraram que a abordagem em camadas foi um sucesso pois ataques que tentavam modificar ou apagar dados foram bloqueados pelo <strong>Fortalecimento de Permissões</strong>; ataques que tentavam vazar dados de outros usuários foram prevenidos pela <strong>Reescrita de Consultas e pelo Pré-carregamento de Dados.</strong>; e os ataques indiretos (envenenamento de dados) não deram certo por causa do <strong>LLM Guardião</strong>. Dessa forma, as quatro técnicas de defesa frustraram efetivamente todos os ataques identificados, provando a validade da abordagem de segurança em camadas, e também, as defesas propostas são eficientes e introduzem sobrecargas de modestas a insignificantes.
+            Na avaliação da eficácia foi realizada a confirmação da vulnerabilidade, em que os pesquisadores replicaram com sucesso todos os ataques (U.1, RD.1, RI.1, etc.) na aplicação da livraria sem nenhuma proteção. Em seguida, eles ativaram o portfólio de defesas e reexecutaram os mesmos ataques. Os resultados mostraram que a abordagem em camadas foi um sucesso pois ataques que tentavam modificar ou apagar dados foram bloqueados pelo <strong>Fortalecimento de Permissões</strong>; ataques que tentavam vazar dados de outros usuários foram prevenidos pela <strong>Reescrita de Consultas e pelo Pré-carregamento de Dados</strong>; e os ataques indiretos (envenenamento de dados) não deram certo por causa do <strong>LLM Guardião</strong>. Dessa forma, as quatro técnicas de defesa frustraram efetivamente todos os ataques identificados, provando a validade da abordagem de segurança em camadas, e também, as defesas propostas são eficientes e introduzem sobrecargas de modestas a insignificantes.
         </p>
         <h3 style="color:#2d3a5a; margin-top:40px;">Conclusão</h3>
         <br>
